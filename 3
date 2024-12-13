@@ -1,0 +1,42 @@
+Git 명령어 요약
+git status
+현재 상태 확인:
+$ git status: 현재 상태 표시.
+$ git status --short 또는 $ git status -s: 간단한 상태 표시.
+$ git status --long: 상세 상태 표시.
+파일 추가 및 커밋
+파일 생성:
+$ echo [내용] > [파일명]: 파일 생성 및 내용 입력.
+스테이징:
+$ git add [파일명]: 파일을 작업 디렉토리에서 스테이징 영역으로 이동.
+커밋:
+$ git commit: 편집기 실행 후 커밋 메시지 작성.
+$ git commit -m "[메시지]": 커밋 메시지를 한 번에 입력.
+$ git commit -a -m "[메시지]" 또는 $ git commit -am "[메시지]": 추가와 커밋을 함께 실행(단, untracked 파일은 제외).
+로그 조회
+기본 로그:
+$ git log: 커밋 이력 표시.
+$ git log --oneline: 간단한 한 줄 이력 표시.
+$ git log --patch 또는 $ git log -p: 이력과 함께 파일 변경 내용 표시.
+마지막 커밋 정보:
+$ git show: 가장 최근 커밋의 정보와 파일 변화 표시.
+편집기 사용
+편집기 열기:
+$ git config --global core.editor 'code --wait': Visual Studio Code를 기본 편집기로 설정.
+편집기 명령어:
+i: 입력 모드.
+:wq: 저장 후 종료.
+HEAD 및 Checkout
+HEAD 상태:
+HEAD: 현재 커밋 상태.
+HEAD~[숫자]: 이전 [숫자]만큼의 커밋 상태.
+시간여행 (Checkout):
+$ git checkout HEAD~[숫자]: 이전 [숫자] 커밋 상태로 이동.
+$ git checkout main: 현재 브랜치 상태로 복귀.
+주의: 워킹 디렉토리, 스테이징 영역, 저장소 상태가 같아야 안전.
+git stash
+임시 저장:
+$ git stash: 워킹 디렉토리와 스테이징 영역 내용을 임시 저장 후 초기화.
+활용: 변경 내용을 보존하며 다른 작업을 진행할 때 사용.
+모든 로그 조회
+$ git log --all: 모든 커밋 이력 확인. 시간여행 중 커밋 위치 확인 가능.
