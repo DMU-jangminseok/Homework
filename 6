@@ -1,0 +1,57 @@
+1. Clone
+원격 저장소 복제 명령어.
+기본 사용:
+bash
+코드 복사
+git clone [주소]
+폴더 이름 지정:
+bash
+코드 복사
+git clone [주소] [폴더]
+현재 폴더에 복제:
+bash
+코드 복사
+git clone [주소] .
+2. Remote
+원격 저장소 관리 명령어.
+원격 저장소 추가:
+bash
+코드 복사
+git remote add origin [주소]
+원격 저장소 정보 확인:
+bash
+코드 복사
+git remote show origin
+원격 저장소 이름 변경:
+bash
+코드 복사
+git remote rename origin org
+원격 저장소 삭제:
+bash
+코드 복사
+git remote rm org
+3. Personal Access Token (PAT)
+GitHub 인증을 위한 토큰.
+발급 위치:
+Settings > Developer Settings > Personal Access Tokens
+주의: 발급 후 다시 확인 불가. 반드시 저장 필요.
+4. Push
+로컬 변경 사항을 원격 저장소에 업로드.
+Push 명령어:
+bash
+코드 복사
+git push [저장소 별칭] [브랜치]
+첫 Push 시 간소화:
+bash
+코드 복사
+git push -u [저장소 별칭] [브랜치]
+이후 인자 생략 가능.
+기본 브랜치 설정:
+bash
+코드 복사
+git config --global push.default current
+5. Fetch
+원격 저장소의 변경 사항을 가져오기(병합 없이).
+bash
+코드 복사
+git fetch [저장소 별칭]
